@@ -6,7 +6,6 @@ use src\ServletFactory;
 
 class ServletFactoryTest extends TestCase
 {
-    
     public function testServletPrintsMessage()
     {
         ob_start();
