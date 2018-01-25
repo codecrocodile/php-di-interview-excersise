@@ -20,7 +20,7 @@ class ServletFactoryTest extends TestCase
         
         ob_end_flush();
        
-        $this->assertEquals('Cohesion Digital', $outputBufferContents, '');
+        $this->assertEquals('Cohesion Digital', $outputBufferContents, 'The output buffer doesn\'t contain the contents we expected. Please compare the actual and expected values below:');
     }
 }
 ?>
