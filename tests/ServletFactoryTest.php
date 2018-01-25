@@ -22,5 +22,13 @@ class ServletFactoryTest extends TestCase
        
         $this->assertEquals('Cohesion Digital', $outputBufferContents, 'The output buffer doesn\'t contain the contents we expected. Please compare the actual and expected values below:');
     }
+    
+    public function testServletFactoryThrowsException()
+    {
+        $this->expectExceptionMessage('Invalid servlet mode.');
+        
+        $servletFactory = new ServletFactory();
+        $databaseServlet = $servletFactory->createServer(-1);
+    }
 }
 ?>

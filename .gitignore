@@ -1,5 +1,5 @@
 .settings
 .buildpath
 .project
-composor.lock
+composer.lock
 /vendor

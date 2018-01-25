@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace src;
 
+use Exception;
+
 class ServletFactory
 {
     public const DATABASE_MODE = 0;
@@ -13,6 +15,8 @@ class ServletFactory
                 $messageProvider = new Database();
                 return new Servlet($messageProvider);
         }
+        
+        throw new Exception('Invalid servlet mode.');
     }
 }
 ?>
